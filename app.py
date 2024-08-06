@@ -4,6 +4,8 @@ import numpy as np
 import string
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
+import nltk
+nltk.download('stopwords')
 
 # Load the pre-trained model and TF-IDF vectorizer
 with open('model.pkl', 'rb') as model_file:
