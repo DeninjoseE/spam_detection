@@ -1,0 +1,4 @@
+streamlit==1.25.0  # Streamlit version can be updated based on your current installation
+scikit-learn==1.2.2  # Ensure the version matches the one you used to train the model
+nltk==3.8.1  # NLTK library for stopwords
+numpy==1.23.5  # For numerical operations
