@@ -4,6 +4,7 @@ import numpy as np
 import string
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
+
 import nltk
 nltk.download('stopwords')
 
@@ -72,16 +73,15 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 # Streamlit application
-st.title('SMS Spam Classification')
+st.title('**SMS Spam Detection**')
 
-st.write('Enter your SMS message below to check if it is spam or not:')
+st.write('**Enter your SMS message below to check if it is spam or not:**')
 
-user_input = st.text_area("Message")
+user_input = st.text_area("**Message**")
 
-if st.button('Classify'):
+if st.button('**Classify**'):
     if user_input:
         proba, result = predict_message(user_input)
-        st.write(f'The message is classified as: **{result}**')
-        st.write(f'Prediction probabilities: {proba}')
+        st.write(f'**The message is classified as: {result}**')
     else:
-        st.write("Please enter a message.")
+        st.write("**Please enter a message.**")
